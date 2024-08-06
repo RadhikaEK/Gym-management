@@ -1,0 +1,56 @@
+{% extends 'temp/ad_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>username</td>
+            <td><input type="text" name="username" placeholder="Enter username"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="ps1"></td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td><input type="number" name="age"></td>
+        </tr>
+        <tr>
+            <td>gender</td>
+            <td><input type="radio" name="g1" value="male">Male</td><br>
+            <td><input type="radio" name="g1" value="female">Female</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td><input type="number" name="a1"></td>
+        </tr>
+         <tr>
+            <td>height</td>
+            <td><input type="number" name="h1"></td>
+        </tr>
+        <tr>
+            <td>body_type</td>
+            <td><input type="text" name="b1"></td>
+        </tr>
+        <tr>
+            <td>fat</td>
+            <td><input type="text" name="f1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
+{% endblock %}

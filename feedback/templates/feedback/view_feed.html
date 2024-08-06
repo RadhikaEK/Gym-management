@@ -1,0 +1,28 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+
+	<h1 align="center">VIEW FEEDBACK</h1>
+	<table align="center" class="table table-bordered">
+		<tr>
+		<td><b>FEEDBACK</b></td>
+		<td><b>DATE</b></td>
+		<td><b>TIME</b></td>
+	</tr>
+        {% if objval %}
+        {% for obj in objval %}
+	<tr>
+		<td>{{ obj.feedback }}</td>
+		<td>{{ obj.date }}</td>
+		<td>{{ obj.time }}</td>
+        <td><a href="{% url 'reply' idd=obj.f_id%}">reply</a> </td>
+		
+	</tr>
+        {% endfor %}
+    {% endif %}
+
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'temp/gym_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <table border="2" align="center">
+        <tr>
+            <td><select name="trainer_id">
+                {% for i in x %}
+                    <option value="{{ i.g_id }}">{{ i.gym_name }}</option>
+                {% endfor %}
+            </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td><input type="date" name="d1"></td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td><input type="time" name="t1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="shedule"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'temp/gym_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>user_id</th>
+        <th>trainer_id</th>
+    </tr>
+     {% for i in x %}
+    <tr>
+
+            <td>{{ i.u.username }}</td>
+            <td>{{ i.g.gym_name }}</td>
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,40 @@
+
+{% extends 'temp/admin.html' %}
+
+
+{% block base %}
+	<h1 align="center">VIEW TRAINER DETAILS</h1>
+	<table align="center" class="table table-bordered">
+		<tr>
+		<td><b>TRAINER NAME</b></td>
+		<td><b>LOCATION</b></td>
+		<td><b>PHONE NUMBER</b></td>
+		<td><b>EMAIL</b></td>
+		<td><b>BRANCH</b></td>
+            <td><b>STATUS</b></td>
+            <td></td>
+            <td></td>
+
+
+	</tr>
+        {% if objval %}
+        {% for obj in objval %}
+	<tr>
+		<td>{{ obj.gym_name }}</td>
+		<td>{{ obj.location }}</td>
+		<td>{{ obj.phn_number }}</td>
+		<td>{{ obj.email }}</td>
+		<td>{{ obj.branch }}</td>
+        <td>{{ obj.status }}</td>
+        <td><a href="{% url 'te_approve' idd=obj.g_id %}">approve</a> </td>
+        <td><a href="{% url 'te_reject' idd=obj.g_id %}">reject</a> </td>
+		
+		
+	</tr>
+        {% endfor %}
+    {% endif %}
+
+    </table>
+
+
+{% endblock %}

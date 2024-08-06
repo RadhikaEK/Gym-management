@@ -1,0 +1,22 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    <tr>
+        <th>view chat</th>
+    </tr>
+    {% for i in x %}
+        <tr>
+        <td>{{ i.chat }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

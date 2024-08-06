@@ -1,0 +1,32 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" class="table table-bordered" border="2">
+		<tr>
+		<td><b>TRAINER NAME</b></td>
+		<td><b>LOCATION</b></td>
+		<td><b>PHONE NUMBER</b></td>
+		<td><b>EMAIL</b></td>
+		<td><b>BRANCH</b></td>
+            <td><b>STATUS</b></td>
+        </tr>
+    {% for i in x %}
+        <tr>
+        <td>{{ i.gym_name }}</td>
+        <td>{{ i.location }}</td>
+		<td>{{ i.phn_number }}</td>
+		<td>{{ i.email }}</td>
+		<td>{{ i.branch }}</td>
+        <td>{{ i.status }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+{#        <th>WORKOUT NAME</th>#}
+        <th>video</th>
+    </tr>
+    {% for i in x %}
+{#        <td>{{ i.workout_name }}</td>#}
+{#        <td>{{ i.details }}</td>#}
+        <td><video controls="True" width="200" height="175" autoplay="False">
+            <source src="/static/{{ i.video }}" type="video/mp4">
+        </video></td>
+    {% endfor %}
+
+</table>
+</body>
+</html>
+{% endblock %}

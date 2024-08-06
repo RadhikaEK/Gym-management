@@ -1,0 +1,30 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>package</th>
+        <th>duration</th>
+        <th>fee</th>
+        <th>description</th>
+        <th></th>
+    </tr>
+    {%  for i in x %}
+        <tr>
+        <td>{{ i.package }}</td>
+        <td>{{ i.duration }}</td>
+        <td>{{ i.fee }}</td>
+        <td>{{ i.description }}</td>
+        <td><a href="{% url 'tr_delete' idd=i.gp_id %}">delete</a> </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

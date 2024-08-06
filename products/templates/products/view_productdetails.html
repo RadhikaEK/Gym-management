@@ -1,0 +1,24 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2" align="center">
+    <tr>
+        <th>product name</th>
+        <th>price</th>
+    </tr>
+    {% for i in x %}
+        <tr>
+        <td>{{ i.product_name }}</td>
+        <td>{{ i.price }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

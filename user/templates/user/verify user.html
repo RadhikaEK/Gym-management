@@ -1,0 +1,47 @@
+<h2 align="center">VIEW USER</h2>
+   
+
+     <table align="center" width="900" border="4" class="text-center">
+
+
+        <tr>
+
+            <td><b>USERNAME</b></td>
+            <td><b>AGE</b></td>
+            <td><b>GENDER</b></td>
+            <td><b>HEIGHT</b></td>
+            <td><b>WEIGHT</b></td>
+            <td><b>BODY TYPE</b></td>
+            <td><b>FAT</b></td>
+
+
+        </tr>
+         {% if objval %}
+         {% for obj in objval %}
+          
+           
+
+                <tr>
+                     <td>{{ obj.username }}</td>
+                     <td>{{ obj.age }}</td>
+                     <td>{{ obj.gender }}</td>
+                     <td>{{ obj.height }}</td>
+                     <td>{{ obj.weight }}</td>
+                     <td>{{ obj.body_type }}</td>
+                     <td>{{ obj.fat }}</td>
+                     
+                </tr>
+         {% endfor %}
+     {% endif %}
+
+               
+
+
+               
+
+
+
+
+    
+
+</table>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>username</th>
+        <th>password</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>weight</th>
+        <th>height</th>
+        <th>body_type</th>
+        <th>fat</th>
+    </tr>
+    {% for i in x %}
+        <tr>
+            <td>{{ i.username }}</td>
+            <td>{{ i.password }}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.gender }}</td>
+            <td>{{ i.weight}}</td>
+            <td>{{ i.height }}</td>
+            <td>{{ i.body_type }}</td>
+            <td>{{ i.fat }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

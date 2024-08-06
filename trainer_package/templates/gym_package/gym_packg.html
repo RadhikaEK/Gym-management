@@ -1,0 +1,66 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+
+
+<h1 align="center">REGISTER GYM PACKAGE</h1>
+	
+	<form method="post">
+        {% csrf_token %}
+
+		<table align="center">
+			<tr>
+				<td>PACKAGES 
+					
+			</td>
+			<td height="50"><input type="text" name="pa" required="" class="form-control">
+				
+			</td>
+			</tr>
+			
+			<tr>
+				<td>DURATION 
+					
+				</td>
+				<td height="50"><input type="PHONE" name="dur" required="" class="form-control">
+					
+				</td>
+				
+			</tr>
+
+			<tr>
+				<td>FEE 
+					
+				</td>
+				<td height="50"><input type="text" name="fee" required="" class="form-control">
+					
+				</td>
+				
+			</tr>
+			<tr>
+				<td>DESCRIPTION
+					
+				</td>
+				<td height="50"><input type="text" name="des" required="" class="form-control">
+					
+				</td>
+				
+			</tr>
+
+			
+
+			<tr>
+                <td></td>
+			<td height="50"> 
+					<input type="submit" name="REGISTER" value="REGISTER" class="btn btn-primary">
+				
+
+				</td>
+		</tr>
+	</table>
+
+
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'temp/gym_home.html' %}
+{% block base %}
+
+
+
+
+<h1 align="center">WORKOUT DETAILS</h1>
+	
+	<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+		<table align="center">
+			
+
+			<tr>
+				<td>WORKOUT NAME
+					
+				</td>
+				<td height="50"><input type="text" name="w" required="" class="form-control">
+					
+				</td>
+				
+			</tr>
+
+            <tr>
+				<td>VIDEO
+
+				</td>
+				<td height="50"><input type="file" name="file" accept="video/*" required="" class="form-control">
+
+				</td>
+
+			</tr>
+
+
+            <tr>
+				<td>WORKOUT DETAILS
+
+				</td>
+				<td height="50">
+
+                    <textarea name="d" class="form-control" rows="3" cols="30">
+
+                    </textarea>
+
+				</td>
+
+			</tr>
+
+
+
+
+			<tr align="center">
+                <td></td>
+			<td height="50"> 
+					<input type="submit" name="ADD" value="ADD" class="btn btn-primary">
+				
+
+				</td>
+		</tr>
+	</table>
+
+
+
+    </form>
+
+
+
+{% endblock %}
